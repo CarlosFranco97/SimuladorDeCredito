@@ -1,4 +1,5 @@
 import { usuarios } from '../models/ModelUsuario.js';
+
 export const login = () => {
     const loginUsuario = document.getElementById('loginUsuario').value;
     const loginContrasena = document.getElementById('loginContrasena').value;
@@ -13,10 +14,12 @@ export const login = () => {
  
     if(!existeUsuario) {
         Swal.fire({
-            title: "The Internet?",
-            text: "That thing is still around?",
-            icon: "question"
-          });
+          title: "Error",
+          text: "Usuario y/contraseña incorrecto o no existe",
+          icon: "error",
+        });
+        
+        return;
     }
 
     if(existeUsuario) {
@@ -24,7 +27,7 @@ export const login = () => {
         Swal.fire({
           title: `Bienvenido ${loginUsuario}`,
           html: "Será redireccionado en <b></b> milisegundos.",
-          timer: 1500,
+          timer: 4000,
           icon: "success",
           timerProgressBar: true,
           didOpen: () => {
@@ -49,18 +52,19 @@ export const login = () => {
 
 export const register = () => {
     //capturando nombre del campo
-    let registroNombre = document.getElementById('registroNombre').value;
-    console.log(registroNombre);    
+    // let registroNombre = document.getElementById('registroNombre').value;
+    // console.log(registroNombre);    
     let registroUsuario = document.getElementById('usuarioRegistro').value;
     let correoRegistro = document.getElementById('correoRegistro').value;
     let contrasenaRegistro = document.getElementById('contrasenaRegistro').value;
     let contrasenaConfirmarRegistro = document.getElementById('contrasenaConfirmarRegistro').value;
 
-    console.log(typeof(registroNombre));
-    if(registroNombre === '' || registroNombre === null) return;
+    // console.log(typeof(registroNombre));
+    // if(registroNombre === '' || registroNombre === null) return;
+    if(registroUsuario === '' || registroUsuario === null) return;
 
     let newRegistro = {
-        nombre: registroNombre, 
+        // nombre: registroNombre, 
         usuario: registroUsuario,
         correo: correoRegistro,
         contraseña: contrasenaRegistro,
@@ -68,8 +72,8 @@ export const register = () => {
     }
 
     usuarios.push(newRegistro);
-    document.getElementById('form-registro').style.display = 'none';
-    document.getElementById('form-login').style.display = 'flex';
+    // document.getElementById('form-registro').style.display = 'none';
+    // document.getElementById('form-login').style.display = 'flex';
     console.log(usuarios);
     localStorage.setItem("usuarios", JSON.stringify(usuarios)); 
 }

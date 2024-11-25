@@ -7,7 +7,7 @@
     <title>Usuario</title>
 </head>
 <body>
-    <form id="form-login" class="login" action="">
+    <!-- <form id="form-login" class="login" action="">
        <div>
             <label for="">Usuario</label>
             <input name="loginUsuario" id="loginUsuario"  type="text">
@@ -50,7 +50,57 @@
         <p id="btnFormRegistro" class="btnRegistro">
             ¿Ya tiene cuenta?
         </p>
-    </form>
+    </form> -->
+
+    <div class="contenedor-formularios"> 
+        <form class="registro" id="registro" action="">
+            <h3 id="abrir-registro" class="titulo-registro">Registro</h3>
+            <div>
+                <!-- <label for="">Usuario</label> -->
+                <input placeholder="User name" type="text" name="usuarioRegistro" id="usuarioRegistro">
+            </div>
+            <div>
+                <!-- <label for="">Correo</label> -->
+                <input placeholder="Correo electrónico" type="email" name="correoRegistro" id="correoRegistro">
+            </div>
+            <div>
+                <!-- <label for="">Contraseña</label> -->
+                <input placeholder="Contraseña" type="password" name="contrasenaRegistro" id="contrasenaRegistro">
+            </div>
+            <div>
+                <!-- <label for="">Contraseña</label> -->
+                <input placeholder="Confirme contraseña" type="password" name="contrasenaConfirmarRegistro" id="contrasenaConfirmarRegistro">
+            </div>
+            <!-- <div> -->
+                <!-- <label for="">Confirme Contraseña</label> -->
+                <!-- <input placeholder="Edad" type="number"> -->
+            <!-- </div> -->
+            <select name="" id="">
+                <option value="">Masculino</option>
+                <option value="">Femenino</option>
+            </select>
+            <button id="btnRegistrar" type="button">
+                Registrarme
+            </button>
+        </form>
+        <form class="login" id="login" action="">
+            <h3 id="abrir-login">Iniciar sesion</h3>
+                <section>
+                    <div>
+                        <!-- <label for="">Usuario</label> -->
+                        <input type="text" placeholder="Email" id="loginUsuario">
+                    </div>
+                    <div>
+                        <!-- <label for="">Contraseña</label> -->
+                        <input type="password" placeholder="password" id="loginContrasena">
+                    </div>
+                    <button id="btnLogin" type="button">
+                        Iniciar sesion
+                    </button>
+                </section>
+        </form>
+    </div>
+
     <script type="module" src="../src/js/script.js"></script>
     <script type="module" src="../src/js/scriptUsuario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
