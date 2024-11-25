@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/viewUsuario.css">
+    <title>Usuario</title>
+</head>
+<body>
+    <form id="form-login" class="login" action="">
+       <div>
+            <label for="">Usuario</label>
+            <input name="loginUsuario" id="loginUsuario"  type="text">
+        </div>
+        <div>
+            <label for="">Contraseña</label>
+            <input name="loginContrasena" id="loginContrasena" type="password">
+        </div> 
+        <button id="btnLogin"  type="button">Iniciar sesión</button>
+        <p id="btnFormLogin" class="btnLogin">
+            ¿No tiene cuenta?   
+        </p>
+    </form>
+
+    <form id="form-registro"  class="register" action="">
+        <div>
+            <label for="">Nombre</label>
+            <input name="registroNombre" id="registroNombre"  type="text">
+        </div>
+        <span id="mensajeNombre" class="mensajeNombre">
+            
+        </span>
+        <div>
+            <label for="">Usuario</label>
+            <input name="usuarioRegistro" id="usuarioRegistro"  type="text">
+        </div>
+        <div>
+            <label for="">Correo</label>
+            <input name="correoRegistro" id="correoRegistro"  type="email">
+        </div>
+        <div>
+            <label for="">Contraseña</label>
+            <input name="contrasenaRegistro" id="contrasenaRegistro"  type="password">
+        </div>
+        <div>
+            <label for="">Confirmar contraseña</label>
+            <input name="contrasenaConfirmarRegistro" id="contrasenaConfirmarRegistro"  type="password">
+        </div>
+        <button id="btnRegistrar" type="button">Registrarse</button>
+        <p id="btnFormRegistro" class="btnRegistro">
+            ¿Ya tiene cuenta?
+        </p>
+    </form>
+    <script type="module" src="../src/js/script.js"></script>
+    <script type="module" src="../src/js/scriptUsuario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
