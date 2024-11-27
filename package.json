@@ -1,0 +1,19 @@
+{
+  "name": "simuladorcredito",
+  "version": "1.0.0",
+  "description": "<h3 align=\"center\">Este proyecto muestra la construcción de una aplicación web estática manipulada con JavaScript y simulando el comportamiento de un arreglo o un archivo json.<br>El proyecto se desarrolla con el patron de diseño MVC (Model View Controller).</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaSript"
+  ],
+  "author": "Carlos Franco",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
