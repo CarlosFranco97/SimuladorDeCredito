@@ -18,24 +18,24 @@ for (let index = 0; index < inputs.length; index++) {
 
 function validarFormulario({ target }) {
     switch (target.name) {
-        // case 'registroNombre':
-        //     if(expresionesRegulares.nombre.test(target.value)) {
-        //         // console.log('pasó la validacion');
-        //         // target.style.border = 'green 3px solid';
-        //         // document.querySelector('#parrafoValidaNombre').style.display = 'none';
-        //         document.getElementById('registroNombre').classList.add('correcto');
-        //         document.getElementById('registroNombre').classList.remove('incorrecto');
-        //         // document.getElementById('mensajeNombre').textContent = ''
-        //     } else {
-        //         // console.log('El campo solo permite letras en mayusculas');
-        //         // target.style.border = 'red solid 3px';
-        //         // document.querySelector('#parrafoValidaNombre').style.display = 'flex';
-        //         document.getElementById('registroNombre').classList.add('incorrecto');
-        //         document.getElementById('registroNombre').classList.remove('correcto');
-        //         // document.getElementById('mensajeNombre').textContent = 'El campo solo permite letras mayusculas';
-        //     }      
+        case 'registroNombre':
+            if(expresionesRegulares.nombre.test(target.value)) {
+                // console.log('pasó la validacion');
+                // target.style.border = 'green 3px solid';
+                // document.querySelector('#parrafoValidaNombre').style.display = 'none';
+                document.getElementById('registroNombre').classList.add('correcto');
+                document.getElementById('registroNombre').classList.remove('incorrecto');
+                // document.getElementById('mensajeNombre').textContent = ''
+            } else {
+                // console.log('El campo solo permite letras en mayusculas');
+                // target.style.border = 'red solid 3px';
+                // document.querySelector('#parrafoValidaNombre').style.display = 'flex';
+                document.getElementById('registroNombre').classList.add('incorrecto');
+                document.getElementById('registroNombre').classList.remove('correcto');
+                // document.getElementById('mensajeNombre').textContent = 'El campo solo permite letras mayusculas';
+            }      
 
-        //     break;
+            break;
 
         case 'usuarioRegistro':
             if (expresionesRegulares.usuario.test(target.value)) {
