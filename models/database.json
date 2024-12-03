@@ -15,6 +15,22 @@
       "correo": "luis@gmail.com",
       "contraseña": "Luis123!",
       "confirmar": "Luis123!"
+    },
+    {
+      "id": "fdca",
+      "nombre": {},
+      "usuario": "carlos",
+      "correo": "carlosfranco63.cf@gmail.com",
+      "contraseña": "Abibi123!",
+      "confirmar": "Abibi123!"
+    },
+    {
+      "id": "1806",
+      "nombre": "CARLOS",
+      "usuario": "carlos",
+      "correo": "carlosfranco63.cf@gmail.com",
+      "contraseña": "Abibi2020!",
+      "confirmar": "Abibi2020!"
     }
   ]
 }

@@ -81,7 +81,7 @@ export const login = () => {
 
 export const register = () => {
     //capturando nombre del campo
-    // let registroNombre = document.getElementById('registroNombre').value;
+    let registroNombre = document.getElementById('registroNombre').value;
     // console.log(registroNombre);    
     let registroUsuario = document.getElementById('usuarioRegistro').value;
     let correoRegistro = document.getElementById('correoRegistro').value;
@@ -93,7 +93,7 @@ export const register = () => {
     // if(registroUsuario === '' || registroUsuario === null) return;
 
     let newRegistro = {
-        // nombre: registroNombre, 
+        nombre: registroNombre, 
         usuario: registroUsuario,
         correo: correoRegistro,
         contraseña: contrasenaRegistro,
