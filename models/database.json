@@ -2,8 +2,19 @@
   "ModelCredito": [],
   "ModelUsuario": [
     {
-      "nombre": "carlos bolivar",
-      "id": "askasjj2162"
+      "usuario": "Carlos97",
+      "correo": "carlos@gmail.com",
+      "nombre": "carlos",
+      "contraseña": "Abibi123!",
+      "confirme": "Abibi123!",
+      "id": "d039"
+    },
+    {
+      "id": "0c22",
+      "usuario": "luis",
+      "correo": "luis@gmail.com",
+      "contraseña": "Luis123!",
+      "confirmar": "Luis123!"
     }
   ]
 }

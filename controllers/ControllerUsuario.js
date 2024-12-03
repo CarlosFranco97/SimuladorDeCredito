@@ -1,12 +1,41 @@
-import { usuarios } from '../models/ModelUsuario.js';
+// import { usuarios } from '../models/ModelUsuario.js';
+
+const urlUsuarios = 'http://localhost:3000/ModelUsuario';
+let usuarios = [];
+
+const getUsuarios = async() => {
+ 
+  fetch(urlUsuarios)
+  .then( (response) =>  response.json())
+  .then((data) => {
+    usuarios = data; 
+    console.log(usuarios);
+  })
+  .catch(err => console.error(err)); 
+
+
+  // try {
+  //   const response = await fetch(urlUsuarios); 
+  //   if(!response.ok){
+  //     throw new Error('Error en el servidor');
+  //   }
+  //   const data = await response.json();
+  //   console.log(data);
+  // } catch(err) {
+  //   console.error(err.message);
+  // }
+}
+
+getUsuarios();
+
 
 export const login = () => {
     const loginUsuario = document.getElementById('loginUsuario').value;
     const loginContrasena = document.getElementById('loginContrasena').value;
-    const usuarioStorage = JSON.parse(localStorage.getItem("usuarios"));
+    // const usuarioStorage = JSON.parse(localStorage.getItem("usuarios"));
     
     
-    const existeUsuario =  usuarioStorage.some((x) => 
+    const existeUsuario =  usuarios.some((x) => 
         (loginUsuario === x.usuario || loginUsuario === x.correo) &&
         loginContrasena  === x.contraseña
     ); 
@@ -61,7 +90,7 @@ export const register = () => {
 
     // console.log(typeof(registroNombre));
     // if(registroNombre === '' || registroNombre === null) return;
-    if(registroUsuario === '' || registroUsuario === null) return;
+    // if(registroUsuario === '' || registroUsuario === null) return;
 
     let newRegistro = {
         // nombre: registroNombre, 
@@ -71,9 +100,22 @@ export const register = () => {
         confirmar: contrasenaConfirmarRegistro
     }
 
-    usuarios.push(newRegistro);
+    // usuarios.push(newRegistro);
     // document.getElementById('form-registro').style.display = 'none';
     // document.getElementById('form-login').style.display = 'flex';
     console.log(usuarios);
-    localStorage.setItem("usuarios", JSON.stringify(usuarios)); 
-}
+    // localStorage.setItem("usuarios", JSON.stringify(usuarios)); 
+    
+    pushUsuario(newRegistro);
+
+  }
+
+  function pushUsuario(newRegistro){
+    console.log(newRegistro);
+    fetch(urlUsuarios, {
+      method: 'POST',
+      body: JSON.stringify(newRegistro)
+    })
+    .catch(err => console.error(err));  
+    
+  }

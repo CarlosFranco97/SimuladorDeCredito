@@ -25,7 +25,7 @@ function validarFormulario({ target }) {
                 // document.querySelector('#parrafoValidaNombre').style.display = 'none';
                 document.getElementById('registroNombre').classList.add('correcto');
                 document.getElementById('registroNombre').classList.remove('incorrecto');
-                // document.getElementById('mensajeNombre').textContent = ''
+                // document.getElementById('mensajeNombre').textContent = ''    
             } else {
                 // console.log('El campo solo permite letras en mayusculas');
                 // target.style.border = 'red solid 3px';
